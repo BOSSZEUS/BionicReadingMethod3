@@ -1,0 +1,4 @@
+/* styles.css */
+b {
+  color: var(--bold-color, black);
+}
