@@ -2,3 +2,6 @@
 b {
   color: var(--bold-color, black);
 }
+body {
+  color: rgb(45, 45, 45);
+}

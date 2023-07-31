@@ -1,7 +1,8 @@
-// popup.js
 document.getElementById('save').addEventListener('click', function () {
-    var color = document.getElementById('color').value;
-    chrome.storage.sync.set({ boldColor: color }, function () {
-        console.log('Color is ' + color);
+    var boldColor = document.getElementById('boldColor').value;
+    var bgColor = document.getElementById('bgColor').value;
+    chrome.storage.sync.set({ boldColor: boldColor, bgColor: bgColor }, function () {
+        console.log('Bold color is ' + boldColor);
+        console.log('Background color is ' + bgColor);
     });
 });

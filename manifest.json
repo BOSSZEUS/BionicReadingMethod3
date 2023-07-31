@@ -1,21 +1,21 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Bionic Reader",
-  "description": "Apply the Bionic Reading method to your text.",
   "version": "1.0",
-  "permissions": ["activeTab", "contextMenus"],
+  "action": {
+    "default_popup": "popup.html"
+  },
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
+  },
+  "permissions": ["activeTab", "contextMenus", "storage"],
+  "action": {
+    "default_popup": "popup.html"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "css": ["styles.css"]
+      "js": ["content.js"]
     }
-  ],
-  "browser_action": {
-    "default_popup": "popup.html"
-  }
+  ]
 }
